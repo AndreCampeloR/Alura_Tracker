@@ -10,6 +10,7 @@
           type="text "
           class="input"
           placeholder="Qual tarefa você deseja inciar ?"
+          v-model="descricao"
         />
       </div>
 
@@ -28,8 +29,7 @@ export default defineComponent({
   name: "FormularioHome",
   data() {
     return{
-        tempoEmSegundos: 0,
-        cronometro: 0
+        descricao: ''
     }
   },
   components: {
@@ -38,6 +38,8 @@ export default defineComponent({
   methods: {
     finalizarTarefa(tempoDecorrido: number) : void{
             console.log('tempo de tarefa', tempoDecorrido)
+            console.log('descriçäo da tarefa', this.descricao)
+            this.descricao = ''
     }
   }
 });
