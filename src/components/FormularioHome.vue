@@ -14,7 +14,7 @@
       </div>
 
       <div class="column">
-        <TemporizadorFormulario/>
+        <TemporizadorFormulario @ao-temporizador-finalizado="finalizarTarefa"/>
       </div>
     </div>
   </div>
@@ -34,6 +34,11 @@ export default defineComponent({
   },
   components: {
     TemporizadorFormulario
+  },
+  methods: {
+    finalizarTarefa(tempoDecorrido: number) : void{
+            console.log('tempo de tarefa', tempoDecorrido)
+    }
   }
 });
 </script>
