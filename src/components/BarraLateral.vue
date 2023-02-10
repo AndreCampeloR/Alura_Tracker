@@ -31,7 +31,7 @@ export default defineComponent({
     methods: {
       alterarTema() {
         this.modoEscuroAtivado = !this.modoEscuroAtivado
-        this.$emit('aoTemaAlterado'), this.modoEscuroAtivado
+        this.$emit('aoTemaAlterado', this.modoEscuroAtivado)
       }
     }
 })
