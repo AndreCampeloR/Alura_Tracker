@@ -1,14 +1,14 @@
 <template>
-  <main class="columns is-gapless is-multiline">
+  <main class="columns is-gapless is-multiline modo-escuro">
       <div class="column is-one-quarter">
          <BarraLateral/>
       </div>
 
-      <div class="column is-three-quarter">
+      <div class="column is-three-quarter conteudo">
          <FormularioHome @aoSalvarTarefa="salvarTarefa"/>
          <div class="Lista">
             <TarefaForm v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" />
-            <BoxTarefa>
+            <BoxTarefa v-if="listaVazia">
                Você näo está muito produtivo hoje :(
             </BoxTarefa>
          </div>
@@ -40,6 +40,11 @@ data()
     tarefas: [] as ITarefas[]
   }
 },
+computed: {
+    listaVazia() : boolean {
+      return this.tarefas.length === 0
+    }
+},
 methods: {
   salvarTarefa (tarefa: ITarefas)
   {
@@ -54,5 +59,21 @@ methods: {
 .Lista
 {
   padding: 1.25rem;
+}
+main
+{
+  --bg-primario: #fff;
+  --texto-primario: #000;
+}
+
+main.modo-escuro
+{
+  --bg-primario: #2b2d42;
+  --texto-primario: #ddd;
+}
+
+.conteudo
+{
+  background-color: var(--bg-primario);
 }
 </style>
