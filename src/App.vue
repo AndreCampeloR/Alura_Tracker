@@ -8,6 +8,9 @@
          <FormularioHome @aoSalvarTarefa="salvarTarefa"/>
          <div class="Lista">
             <TarefaForm v-for="(tarefa, index) in tarefas" :key="index" :tarefa="tarefa" />
+            <BoxTarefa>
+               Você näo está muito produtivo hoje :(
+            </BoxTarefa>
          </div>
       </div>
   </main>
@@ -19,6 +22,7 @@ import BarraLateral from './components/BarraLateral.vue';
 import FormularioHome from './components/FormularioHome.vue';
 import TarefaForm from './components/TarefaForm.vue';
 import ITarefas from './interfaces/ITarefa';
+import BoxTarefa from './components/BoxTarefa.vue';
 
 
 export default defineComponent({
@@ -27,7 +31,8 @@ export default defineComponent({
 { 
   BarraLateral,
   FormularioHome,
-  TarefaForm
+  TarefaForm,
+  BoxTarefa
 },
 data()
 {
