@@ -2,11 +2,11 @@
     <div class="box has-text-weight-bold">
         <div class="columns">
             <div class="column is-7">
-                Descriçäo da tarefa
+                {{tarefa.descricao}}
             </div>
 
             <div class="column">
-                <CronometroFormulario :tempoEmSegundos="15"/>
+                <CronometroFormulario :tempoEmSegundos="tarefa.duracaoEmSegundos"/>
             </div>
         </div>
     </div>
@@ -14,13 +14,20 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import CronometroFormulario from './CronometroFormulario.vue';
+import ITarefas from '../interfaces/ITarefa'
 
 export default defineComponent({
     name: "TarefaForm",
     components: {
         CronometroFormulario
+    },
+    props: {
+        tarefa: {
+            type: Object as PropType<ITarefas>,
+            required: true
+        }
     }
 })
 </script>
