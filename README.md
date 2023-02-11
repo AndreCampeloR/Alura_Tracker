@@ -29,6 +29,7 @@
 ## 🚀 Tecnologias utilizadas 
 - VUE
 - JS
+- Bulma
 - HTML
 
 ## 👨‍💻 Autor
