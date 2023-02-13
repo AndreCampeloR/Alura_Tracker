@@ -29,6 +29,7 @@
 ## 🚀 Tecnologias utilizadas 
 - VUE
 - JS
+- TS
 - Bulma
 - HTML
 
