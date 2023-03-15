@@ -3,9 +3,31 @@
         <h1>
             <img src="../assets/logo.png" alt="">
         </h1>
-        <button class="button" @click="alterarTema">
+        <div>
+          <button class="button" @click="alterarTema">
             {{textoBotao}}
-        </button>
+          </button>
+        </div>
+        <nav class="panel mt-5">
+          <ul>
+              <li>
+                 <router-link to="/" class="link">
+                  <span class="material-symbols-outlined">
+                    list
+                  </span>
+                   <p>Tarefas</p>
+                 </router-link>
+              </li>
+              <li>
+                 <router-link to="/projetos" class="link">
+                  <span class="material-symbols-outlined">
+                    account_tree
+                  </span>
+                   <p>Projetos</p>
+                 </router-link>
+              </li>
+          </ul>
+        </nav>
     </header>
 </template>
 
@@ -51,4 +73,21 @@ header {
       height: auto;
     }
   }
+.panel li {
+  margin: 8px 0;
+}
+.link {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.link {
+  color: #fff;
+}
+.link:hover {
+  color: #FAF0CA;
+}
+.link.router-link-active {
+  color: #FAF0CA;
+}
 </style>
