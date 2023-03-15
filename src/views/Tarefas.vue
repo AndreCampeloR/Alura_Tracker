@@ -17,7 +17,7 @@
   
   
   export default defineComponent({
-    name: 'App',
+    name: 'TarefasView',
     components: 
   { 
     FormularioHome,
