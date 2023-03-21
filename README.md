@@ -20,7 +20,7 @@
 </p>
 
 ## 📝 Sobre
-
+Projeto feito durando o curso de vue da alura
 
 ## 📹 Video de apresentação do projeto
 
