@@ -20,7 +20,9 @@
 </p>
 
 ## 📝 Sobre
-Projeto feito durando o curso de vue da alura
+Projeto feito durando a formação de vue da Alura
+
+o projeto consiste em um 
 
 ## 📹 Video de apresentação do projeto
 
